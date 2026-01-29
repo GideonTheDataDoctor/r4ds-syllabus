@@ -1,0 +1,7 @@
+---
+title: "R4DS Syllabus"
+---
+
+Welcome! Open the syllabus here:
+
+- [Open the syllabus](syllabus.html)

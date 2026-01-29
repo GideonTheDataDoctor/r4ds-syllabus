@@ -1,0 +1,625 @@
+---
+---
+---
+
+# R for Data Science: Complete Study Plan & Syllabus
+
+### Collaborative Book Review Learning Group \| 24 Chapters \| 25 Weeks
+
+**Developed by**: Gideon J I, Junior Research Fellow\
+**Institution**: Christian Medical College, Vellore\
+**Email**: [gideon.ji.inst\@cmcvellore.ac.in](mailto:gideon.ji.inst@cmcvellore.ac.in){.email}\
+**Date Created**: January 29, 2026
+
+------------------------------------------------------------------------
+
+## 📋 OVERVIEW
+
+**Objective**: Master R for data science through collaborative weekly book reviews\
+**Primary Resource**: *R for Data Science (1st Edition)* by Hadley Wickham & Garrett Grolemund\
+**Duration**: 25 weeks (February 4 – July 22, 2026)\
+**Format**: 60-minute weekly meetups with rotating leadership\
+**Group Size**: 14 participants\
+**Level**: Beginner to Intermediate
+
+------------------------------------------------------------------------
+
+## 🎯 LEARNING GOALS
+
+By the end of this course, participants will be able to:
+
+1.  **Import & wrangle data** – Load, clean, reshape messy datasets into analysis-ready format
+2.  **Transform & explore** – Use dplyr to filter, summarize, and join datasets; conduct EDA
+3.  **Visualize effectively** – Create exploratory and publication-ready plots with ggplot2
+4.  **Write functions & automate** – Build reusable functions; iterate efficiently with purrr
+5.  **Model data** – Fit simple and complex models to understand relationships
+6.  **Communicate results** – Generate reproducible reports with R Markdown
+7.  **Apply to epidemiology** – Use all skills on real STH surveillance and research data
+
+------------------------------------------------------------------------
+
+## 📚 COURSE MATERIALS
+
+### Primary Text
+
+-   **R for Data Science (1st Edition)** – Free online: <https://r4ds.hadley.nz>
+
+-   **PDF Available**: All 24 chapters included in this plan
+
+### Secondary References
+
+1.  **The Epidemiologist R Handbook** – Free online: <https://www.epirhandbook.com>
+    -   Domain-specific examples, epi workflows, case studies
+2.  **Advanced R (2nd Edition)** by Hadley Wickham – Free online: <https://adv-r.hadley.nz>
+    -   Deep-dive on functions, vectors, environments, metaprogramming
+
+### Required Software
+
+-   **R** (latest version): <https://cloud.r-project.org>
+-   **RStudio IDE**: <https://www.rstudio.com/download>
+
+------------------------------------------------------------------------
+
+## 📖 COMPLETE 25-WEEK STUDY SCHEDULE (REORDERED FOR LEARNING)
+
+```{r, include=FALSE}
+pacman::p_load(knitr,kableExtra, dplyr)
+```
+
+```{r, echo=FALSE}
+schedule <- data.frame(
+  Session = 1:25,
+  Date = c("Feb 4", "Feb 11", "Feb 18", "Feb 25", "Mar 4", "Mar 11", "Mar 18", "Mar 25", 
+           "Apr 1", "Apr 8", "Apr 15", "Apr 22", "Apr 29", "May 6", "May 13", "May 20", 
+           "May 27", "Jun 3", "Jun 10", "Jun 17", "Jun 24", "Jul 1", "Jul 8", "Jul 15", "Jul 22"),
+  Ch = c("2", "4", "6", "7", "8", "9", "3 (Pt 1)", "3 (Pt 2)", "14", "10", "11", "12", 
+         "13", "5", "1", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"),
+  Chapter = c("Workflow: Basics", "Workflow: Scripts", "Workflow: Projects", "Tibbles with tibble", 
+              "Data Import with readr", "Tidy Data with tidyr", "Data Transformation Pt 1", 
+              "Data Transformation Pt 2", "Pipes with magrittr", "Relational Data", 
+              "Strings with stringr", "Factors with forcats", "Dates & Times with lubridate",
+              "Exploratory Data Analysis", "Data Visualization with ggplot2", "Functions", 
+              "Vectors", "Iteration with purrr", "Model Basics with modelr", 
+              "Model Building", "Many Models with purrr & broom", "R Markdown", 
+              "Graphics for Communication", "R Markdown Formats", "R Markdown Workflow"),
+  Key_Topics = c("Coding fundamentals", "Running code, debugging", "RStudio projects", 
+                 "Tibbles vs data.frame", "CSV/Excel parsing", "pivot_longer/wider", 
+                 "filter, arrange, select", "mutate, summarise, group_by", 
+                 "%>% operator, piping", "Keys, joins", "Regex matching", 
+                 "Recoding factors", "Time spans", "Patterns, outliers", 
+                 "Aesthetics, geoms", "Scoping, arguments", "Atomic vectors", 
+                 "map, walk, reduce", "Simple models", "Case studies", 
+                 "List columns", "Code chunks, YAML", "Labels, themes", 
+                 "Notebooks", "Best practices"),
+  Epi_Ref = c("3: R basics", "3: R basics", "3: R basics", "5: Data wrangling", 
+              "9: Import/export", "5: Data wrangling", "4: dplyr basics", 
+              "4: dplyr basics", "4: dplyr basics", "5: Data wrangling", 
+              "8: Character strings", "6: Factors", "7: Dates", 
+              "10: Descriptive tables", "11: ggplot2", "14: Functions", 
+              "13: Logical vectors", "15: Loops", "20: Statistical modeling", 
+              "20: Statistical modeling", "20: Statistical modeling", 
+              "18: Output formats", "11: ggplot2", "18: Output formats", 
+              "18: Output formats"),
+  Adv_R_Ref = c("Ch5: Style", "Ch5: Style", "Ch5: Style", "Ch2: Data structures", 
+                "Ch3: Subsetting", "Ch3: Subsetting", "Ch3: Subsetting", 
+                "Ch11: Functionals", "Ch11: Functionals", "Ch3: Subsetting", 
+                "Ch6: Functions", "Ch2: Data structures", "Ch6: Functions", 
+                "Ch5: Style guide", "Ch6: Functions", "Ch6: Functions", 
+                "Ch2: Data structures", "Ch11: Functionals", "Ch6: Functions", 
+                "Ch16: Performance", "Ch11: Functionals", "Ch5: Style guide", 
+                "Ch6: Functions", "Ch5: Style guide", "Ch5: Style guide"),
+  Leaders = c("#1", "#2", "#3", "#4", "#5", "#6", "#7", "#8", 
+              "#9 & #10", "#11", "#12", "#13", "#14", "#1", "#2", "#3", 
+              "#4", "#5 & #6", "#7", "#8", "#9", "#11 & #12", "#10", 
+              "#13", "#14")
+)
+
+kable(schedule, escape = FALSE, booktabs = TRUE) %>%
+  kable_styling(bootstrap_options = c("striped", "hover")) %>%
+  row_spec(c(9,18,22), bold = TRUE)
+```
+
+## 📚 BOOK STRUCTURE: ALL 24 CHAPTERS
+
+### **PART I: EXPLORE (Chapters 1–6)**
+
+Foundational concepts and workflows before diving into data manipulation.
+
+```{r, echo=FALSE}
+part1 <- data.frame(
+  Ch = c("1", "2", "3", "4", "5", "6"),
+  Title = c("Data Visualization with ggplot2", 
+            "Workflow: Basics", 
+            "Data Transformation with dplyr", 
+            "Workflow: Scripts", 
+            "Exploratory Data Analysis", 
+            "Workflow: Projects"),
+  `Key Sections` = c("First steps, aesthetics, facets, geoms, stats, layered grammar",
+                    "Coding basics, naming, functions, console interaction",
+                    "filter, arrange, select, mutate, summarise, group_by",
+                    "Running code, diagnostics, debugging in RStudio",
+                    "Variation, covariation, patterns, models",
+                    "RStudio projects, organization, file structure"),
+  Week = c("15", "1", "7–8", "2", "14", "3"),
+  Competency = c("Create exploratory & publication plots",
+                "Understand R fundamentals",
+                "Manipulate data rows/columns",
+                "Write and execute scripts",
+                "Discover insights before modeling",
+                "Organize analyses professionally")
+)
+
+kable(part1, escape = FALSE, booktabs = TRUE) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover")) %>%
+  column_spec(c(1, 4), bold = TRUE)
+```
+------------------------------------------------------------------------
+
+### **PART II: WRANGLE (Chapters 7–13)**
+
+Data import, cleaning, reshaping, and handling special data types.
+
+```{r, echo=FALSE}
+part2 <- data.frame(
+  Ch = c("7", "8", "9", "10", "11", "12", "13"),
+  Title = c("Tibbles with tibble", 
+            "Data Import with readr", 
+            "Tidy Data with tidyr", 
+            "Relational Data with dplyr", 
+            "Strings with stringr", 
+            "Factors with forcats", 
+            "Dates & Times with lubridate"),
+  `Key Sections` = c("Creating, printing, subsetting tibbles",
+                    "Parsing, reading CSV/Excel, writing files",
+                    "pivot_longer, pivot_wider, separate, missing",
+                    "Keys, joins (left/inner/anti), set operations",
+                    "String basics, regex, pattern matching, tools",
+                    "Creating, ordering, recoding factors",
+                    "Creating, components, time spans, zones"),
+  Week = c("4", "5", "6", "10", "11", "12", "13"),
+  Competency = c("Work with tidy data structures",
+                "Import data into R",
+                "Reshape messy data",
+                "Combine multiple datasets",
+                "Handle text data",
+                "Manage categorical variables",
+                "Handle temporal data")
+)
+
+kable(part2, escape = FALSE, booktabs = TRUE) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover")) %>%
+  column_spec(c(1, 4), bold = TRUE)
+```
+------------------------------------------------------------------------
+
+### **PART III: PROGRAM (Chapters 14–17)**
+
+Writing functions and iterating efficiently.
+
+```{r, echo=FALSE}
+part3 <- data.frame(
+  Ch = c("14", "15", "16", "17"),
+  Title = c("Pipes with magrittr", 
+            "Functions", 
+            "Vectors", 
+            "Iteration with purrr"),
+  `Key Sections` = c("%>% , piping alternatives, when to use",
+                    "Components, scoping, arguments, returns",
+                    "Atomic vectors, lists, attributes, augmented",
+                    "For loops, map, walk, reduce, functionals"),
+  Week = c("9", "16", "17", "18"),
+  Competency = c("Chain operations fluently",
+                "Write reusable functions",
+                "Understand R data types",
+                "Loop efficiently")
+)
+
+kable(part3, escape = FALSE, booktabs = TRUE) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover")) %>%
+  column_spec(c(1, 4), bold = TRUE)
+```
+------------------------------------------------------------------------
+
+### **PART IV: MODEL (Chapters 18–20)**
+
+Building and evaluating statistical models.
+
+```{r, echo=FALSE}
+part4 <- data.frame(
+  Ch = c("18", "19", "20"),
+  Title = c("Model Basics with modelr", 
+            "Model Building", 
+            "Many Models with purrr & broom"),
+  `Key Sections` = c("Simple models, visualization, formulas, families",
+                    "Why models, case studies, evaluation",
+                    "List columns, nested data, tidying results"),
+  Week = c("19", "20", "21"),
+  Competency = c("Understand modeling workflow",
+                "Build & evaluate models",
+                "Fit models to grouped data")
+)
+
+kable(part4, escape = FALSE, booktabs = TRUE) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover")) %>%
+  column_spec(c(1, 4), bold = TRUE)
+```
+------------------------------------------------------------------------
+
+### **PART V: COMMUNICATE (Chapters 21–24)**
+
+Documenting and sharing results reproducibly.
+
+```{r, echo=FALSE}
+part5 <- data.frame(
+  Ch = c("21", "22", "23", "24"),
+  Title = c("R Markdown", 
+            "Graphics for Communication", 
+            "R Markdown Formats", 
+            "R Markdown Workflow"),
+  `Key Sections` = c("Basics, formatting, code chunks, YAML",
+                    "Labels, annotations, scales, themes, saving",
+                    "Documents, notebooks, presentations, dashboards",
+                    "Organization, practices, reproducibility"),
+  Week = c("22", "23", "24", "25"),
+  Competency = c("Write reproducible reports",
+                "Polish plots for publication",
+                "Create multiple output formats",
+                "Apply best practices")
+)
+
+kable(part5, escape = FALSE, booktabs = TRUE) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover")) %>%
+  column_spec(c(1, 4), bold = TRUE)
+```
+
+------------------------------------------------------------------------
+
+## 🔗 SECONDARY REFERENCE MAPPING
+
+Use these resources to clarify concepts and explore domain-specific examples:
+
+```{r, echo=FALSE}
+ref_map <- data.frame(
+  `R4DS Chapters` = c("2, 4, 6", "7–9", "10–13", "1, 5, 14", "15–17", "18–20", "21–24"),
+  `Epidemiologist R Handbook` = c("3: R basics", 
+                                 "5: Data wrangling, 9: Import/export", 
+                                 "4: dplyr, 6: Factors, 7: Dates, 8: Strings", 
+                                 "10: Descriptive tables, 11: ggplot2", 
+                                 "14: Functions, 15: Loops", 
+                                 "20: Statistical modeling, 21: Models", 
+                                 "18: Output formats, 22: Communication"),
+  `Advanced R` = c("Ch5: Style guide", 
+                   "Ch2, Ch3: Data structures", 
+                   "Ch3: Subsetting, Ch6: Functions", 
+                   "Ch6: Functions", 
+                   "Ch6: Functions, Ch11: Functionals", 
+                   "Ch16: Performance", 
+                   "Ch5: Style guide"),
+  `When to Use` = c("Fundamentals & code organization",
+                   "Understanding data manipulation",
+                   "Complex transformations",
+                   "Visualization & exploration",
+                   "Programming concepts",
+                   "Modeling & optimization",
+                   "Documentation & sharing")
+)
+
+kable(ref_map, escape = FALSE, booktabs = TRUE) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover")) %>%
+  column_spec(c(1), bold = TRUE)
+```
+------------------------------------------------------------------------
+
+## 📖 BOOK ORDER vs. OUR LEARNING SEQUENCE
+
+### **Why We're Reordering the Chapters**
+
+The **R for Data Science book is published in this order**: Visualization (Ch 1) → Transformation (Ch 3) → Wrangling (Ch 7–13) → Programming (Ch 14–17) → Modeling (Ch 18–20) → Communication (Ch 21–24).
+
+However, **this order isn't optimal for beginners learning epidemiology**. The book's authors acknowledge this in their Preface:
+
+> "Starting with data ingest and tidying is suboptimal because 80% of the time it's routine and boring, and the other 20% of the time it's weird and frustrating. That's a bad place to start learning a new subject! Instead, we'll start with visualization and transformation of data that's already been imported and tidied."
+
+**The problem:** Chapter 1 (ggplot2) assumes clean data exists. But beginners need to **import, clean, and reshape data FIRST** before they can visualize or analyze it.
+
+### **Our Reordered Learning Sequence**
+
+We follow the **natural real-world epidemiological workflow** instead of the book's ordering:
+
+```{r, echo=FALSE}
+sequence <- data.frame(
+  Phase = c("1. Foundation", "2. Wrangling", "3. Exploration", 
+            "4. Programming", "5. Modeling", "6. Communication"),
+  Weeks = c("1–3", "4–13", "14–15", "16–18", "19–21", "22–25"),
+  `Our Order` = c("First", "Second", "Third", "Fourth", "Fifth", "Sixth"),
+  `Book Chapters` = c("2, 4, 6 (Workflow)", 
+                     "7–13 (Import, Tidy, Transform, Join, Handle types)", 
+                     "5, 1 (EDA, Visualization)", 
+                     "15, 16, 17 (Functions, Vectors, Iteration)", 
+                     "18, 19, 20 (Model Basics, Building, Many Models)", 
+                     "21–24 (R Markdown, Graphics, Formats, Workflow)"),
+  Purpose = c("Learn RStudio, organize work, set up projects BEFORE coding",
+             "Get messy data into analysis-ready format",
+             "Explore clean data visually & statistically",
+             "Write reusable code & automate workflows",
+             "Fit & evaluate statistical models",
+             "Document findings & create reproducible reports")
+)
+
+kable(sequence, escape = FALSE, booktabs = TRUE) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover")) %>%
+  column_spec(c(2), bold = TRUE)
+```
+
+### **Why This Order Works Better**
+
+✅ **Motivation**: Learn foundational tools first, then apply them to real problems\
+✅ **Real-world**: Follow the actual epidemiological analysis workflow\
+✅ **Practical**: Work with messy data early; clean it before analyzing\
+✅ **Confidence**: See tangible results at each step (import → clean → analyze → visualize)\
+✅ **Less frustration**: Don't start with "boring" wrangling; build to it naturally
+
+### **Book Order (As Published)**
+
+For reference, here's the original chapter sequence in R for Data Science (1st Edition):
+
+```{r, echo=FALSE}
+book_order <- data.frame(
+  Ch = c("1", "2", "3", "4", "5", "6", "7–13", "14–17", "18–20", "21–24"),
+  Part = c("I: Explore", "I: Explore", "I: Explore", "I: Explore", 
+           "I: Explore", "I: Explore", "II: Wrangle", "III: Program", 
+           "IV: Model", "V: Communicate"),
+  Title = c("Data Visualization with ggplot2",
+            "Workflow: Basics",
+            "Data Transformation with dplyr",
+            "Workflow: Scripts",
+            "Exploratory Data Analysis",
+            "Workflow: Projects",
+            "Tibbles, Import, Tidy, Joins, Strings, Factors, Dates",
+            "Pipes, Functions, Vectors, Iteration",
+            "Model Basics, Building, Many Models",
+            "R Markdown, Graphics, Formats, Workflow")
+)
+
+kable(book_order, escape = FALSE, booktabs = TRUE) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover")) %>%
+  column_spec(c(1), bold = TRUE)
+```
+
+------------------------------------------------------------------------
+
+## 🎓 WEEKLY MEETING FORMAT (60 Minutes)
+
+### **Structure**
+
+```{r, echo= FALSE}
+meeting_format <- data.frame(
+  Time = c("0–15 min", "15–45 min", "45–55 min", "55–60 min"),
+  Activity = c("Summary & Discussion", 
+               "Live Demo, Exercises & Problem-Solving", 
+               "Help & Troubleshooting", 
+               "Wrap-up & Next Week Preview"),
+  Details = c("Leader(s) summarize key concepts & learning objectives; group discusses what was clear/confusing and what's relevant to epi work",
+             "Leader(s) demonstrate 2–3 code examples live; group follows along, attempts exercises, asks questions in real-time",
+             "Leader(s) & peers help resolve coding errors, confusions, and remaining questions",
+             "Summarize key takeaways; preview next week's chapter; assign prep work")
+)
+
+kable(meeting_format, escape = FALSE, booktabs = TRUE) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover")) %>%
+  column_spec(c(1), bold = TRUE)
+```
+
+### **Leader Responsibilities**
+
+Each leader should: 
+- **Read chapter thoroughly** 1 week in advance (3–4 hours) 
+- **Prepare 2–3 worked code examples** to demo live (copy-paste ready) 
+- **Identify 3–5 key concepts** that will be discussed 
+- **Note common confusions** or tricky sections from your own reading 
+- **Bring 2–3 discussion questions** to engage the group 
+- **Help troubleshoot** participant questions & coding errors 
+- **Share practical epi applications** of the chapter content
+
+**For Co-Leaders (3 toughest sessions):** 
+- **Divide responsibilities**: One leads first half, other leads second half  
+- **Coordinate prep work**: Meet 1 week before to align on content & demos 
+- **Share code examples**: Create demo scripts together for consistency
+
+### **Leadership Rotation (Random Selection by Number 1–14)**
+
+**To assign leaders randomly:** 
+1. Each person selects a number between **1 and 14** at the start of the course 
+2. Leadership follows the rotation below across all 25 sessions
+
+```{r, echo=FALSE}
+rotation <- data.frame(
+  Number = c("#1", "#2", "#3", "#4", "#5", "#6", "#7", "#8", "#9", "#10", "#11", "#12", "#13", "#14"),
+  `Session 1` = c("Feb 4", "Feb 11", "Feb 18", "Feb 25", "Mar 4", "Mar 11", "Mar 18", "Mar 25", 
+                  "Apr 1(co)", "Apr 1(co)", "Apr 8", "Apr 15", "Apr 22", "Apr 29"),
+  `Session 2` = c("May 6", "May 13", "May 20", "May 27", "Jun 3(co)", "Jun 3(co)", "Jun 10", 
+                  "Jun 17", "Jun 24", "Jul 8", "Jul 1(co)", "Jul 1(co)", "Jul 15", "Jul 22"),
+  `Total` = rep("2 sessions", 14)
+)
+
+kable(rotation, escape = FALSE, booktabs = TRUE) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover")) %>%
+  column_spec(c(1), bold = TRUE)
+```
+
+**Toughest sessions (2 leads each):**
+Apr 1 (Session 9): #9 & #10 co-lead (Pipes - Ch 14)
+Jun 3 (Session 18): #5 & #6 co-lead (Iteration - Ch 17)
+Jul 1 (Session 22): #11 & #12 co-lead (R Markdown - Ch 21)
+Perfect balance: 14 leads × 2 sessions each = exactly 25 sessions covered!
+
+------------------------------------------------------------------------
+
+## 📝 WEEKLY PREPARATION (~**4 hours**)
+
+Participants should dedicate approximately **4 hours per week**:
+
+### **Before the Meeting** (3.5 hours)
+
+1.  **Read & understand chapter** (**2 hours**)
+    - Skim introduction for context (15 min)
+    - Read thoroughly with code examples (1 hr)
+    - Run **all** examples in RStudio (45 min)  
+    - Take notes on key concepts (15 min)
+
+2.  **Practice exercises** (**1 hour**)
+    - Work through **5–7 exercises** at chapter end
+    - Run code locally; save working examples
+    - Debug errors independently first
+    - Note 2–3 challenges for discussion
+
+3.  **Prepare questions & review** (**30 minutes**)
+    - List **2–3 specific questions** 
+    - Review epi applications from syllabus
+    - Preview next week's chapter overview
+
+### **After the Meeting** (**30 minutes**)
+- Review meeting notes & code demos
+- Re-run 1–2 examples from leader
+- Update personal code library
+
+------------------------------------------------------------------------
+
+## 🔬 EPIDEMIOLOGICAL APPLICATIONS
+
+See how each chapter applies to real STH research:
+
+```{r, echo=FALSE}
+epi_apps <- data.frame(
+  Chapter = c("8", "9", "3, 10", "11", "12, 13", "5, 1", "15–17", "18–20", "21–24"),
+  `Epi Application` = c("Import surveillance data",
+                       "Reshape prevalence data",
+                       "Filter & join datasets",
+                       "Parse case definitions",
+                       "Manage categories & timelines",
+                       "Visualize distribution",
+                       "Automate calculations",
+                       "Model transmission",
+                       "Generate reports"),
+  Example = c("Load district-level STH prevalence data from Excel",
+             "Pivot age-stratified prevalence wide to long format",
+             "Subset by age group; join with population denominators",
+             "Extract infection intensity category from text",
+             "Organize treatment arms; track follow-up dates",
+             "Create maps & plots of STH by region & year",
+             "Write function to calculate prevalence for any region",
+             "Fit age-prevalence curves; predict MDA impact",
+             "Create quarterly surveillance reports in HTML/PDF")
+)
+
+kable(epi_apps, escape = FALSE, booktabs = TRUE) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover")) %>%
+  column_spec(c(1), bold = TRUE)
+```
+
+------------------------------------------------------------------------
+
+## 🤝 GROUP GUIDELINES
+
+### **Expectations**
+
+-   **Attend weekly meetings**: In-person or virtual, same time each week
+-   **Complete prep work**: Read chapter & attempt exercises before meeting
+-   **Participate actively**: Share insights, ask questions, help peers
+-   **Lead 2–3 chapters**: Fulfill your leadership duties when assigned (solo or co-lead)
+-   **Respect others**: Patient with different learning paces & backgrounds
+
+### **Communication**
+
+-   **WhatsApp channel**: Share resources, ask quick questions between meetings
+-   **Google Drive folder**: Store notes, code, datasets
+-   **Meeting notes**: Record key takeaways & useful code snippets each week
+
+------------------------------------------------------------------------
+
+## 📞 SUPPORT & RESOURCES
+
+### **If You Get Stuck**
+
+1.  **Google the error message** – Often finds solutions quickly
+2.  **Search Stack Overflow** – Add `[R]` tag for R-specific results
+3.  **Consult secondary references**:
+    -   Epidemiologist R Handbook: <https://www.epirhandbook.com>
+    -   Advanced R: <https://adv-r.hadley.nz>
+4.  **Ask the group**: Bring confusing sections to weekly meetings
+5.  **WhatsApp channel**: Post quick questions between meetings
+
+### **Helpful Links**
+
+-   **R Project**: <https://www.r-project.org>
+-   **RStudio Download**: <https://www.rstudio.com>
+-   **Tidyverse**: <https://www.tidyverse.org>
+-   **R4DS Online**: <https://r4ds.hadley.nz>
+-   **RStudio Community**: <https://community.rstudio.com>
+-   **Stack Overflow `[R]` tag**: <https://stackoverflow.com/questions/tagged/r>
+
+------------------------------------------------------------------------
+
+## 📅 TIMELINE SUMMARY
+
+```{r, echo=FALSE}
+timeline <- data.frame(
+  Phase = c("Foundations", "Wrangling", "Programming", "Modeling", "Communication"),
+  Weeks = c("1–3", "4–13", "14–18", "19–21", "22–25"),
+  Chapters = c("2, 4, 6", "7–13", "5, 1, 14–17", "18–20", "21–24"),
+  Focus = c("RStudio, scripts, organization",
+           "Import, clean, reshape, join data",
+           "EDA, visualization, functions, iteration",
+           "Fit & evaluate models",
+           "Reports, dashboards, reproducibility")
+)
+
+kable(timeline, escape = FALSE, booktabs = TRUE) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover")) %>%
+  column_spec(c(3), bold = TRUE)
+```
+------------------------------------------------------------------------
+
+## ✅ CHECKLIST FOR GETTING STARTED
+
+Before Week 1 (by February 04, 2026):
+
+-   [ ] Install R (latest version)
+-   [ ] Install RStudio IDE
+-   [ ] Test RStudio: Open it, run `1 + 1` in console
+-   [ ] Read Chapter 2 (Workflow: Basics) for first meeting (Leader #1)
+
+------------------------------------------------------------------------
+
+## 📖 FINAL NOTES
+
+This syllabus provides a **structured path to mastery** of R for epidemiological data science. The key to success is:
+
+1.  **Consistency**: Show up weekly & do the prep work
+2.  **Curiosity**: Ask questions; try variations of examples
+3.  **Collaboration**: Learn from peers; help each other
+4.  **Application**: Apply concepts to your own epi data
+
+By **Week 25**, you'll have the skills to conduct independent, reproducible epidemiological analyses from raw data to publication-ready reports.
+
+------------------------------------------------------------------------
+
+## 📝 Document Version Control
+
+```{r, echo=FALSE}
+versions <- data.frame(
+  Version = c("1.0", "2.0"),
+  Date = c("Jan 21, 2026", "Jan 29, 2026"),
+  Changes = c("Initial complete syllabus with all 24 chapters, 25 weeks, 10-person rotation, 60-min meetings, co-leaders in final 5 weeks, chapters reordered for learning progression",
+             "Updated for 14 leads (each gets exactly 2 sessions), start date Feb 4, 3 toughest sessions with co-leaders (Pipes, Iteration, R Markdown), date-based session schedule")
+)
+
+kable(versions, escape = FALSE, booktabs = TRUE) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover"))
+```
+
+------------------------------------------------------------------------
+
+*Last updated: **January 29, 2026** | Next review: **March 2026***
+
+**Ready to get started? Let's master R for epidemiology! 🚀**

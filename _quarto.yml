@@ -1,0 +1,12 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "R4DS Study Plan"
+  navbar:
+    title: "R4DS Syllabus"
+    left:
+      - href: index.qmd
+        text: Home
+      - syllabus.qmd   # ← Rename your QMD to this

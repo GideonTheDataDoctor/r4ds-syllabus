@@ -1,0 +1,121 @@
+[
+  {
+    "objectID": "syllabus.html#overview",
+    "href": "syllabus.html#overview",
+    "title": "R for Data Science: Complete Study Plan & Syllabus",
+    "section": "📋 OVERVIEW",
+    "text": "📋 OVERVIEW\nObjective: Master R for data science through collaborative weekly book reviews\nPrimary Resource: R for Data Science (1st Edition) by Hadley Wickham & Garrett Grolemund\nDuration: 25 weeks (February 4 – July 22, 2026)\nFormat: 60-minute weekly meetups with rotating leadership\nGroup Size: 14 participants\nLevel: Beginner to Intermediate"
+  },
+  {
+    "objectID": "syllabus.html#learning-goals",
+    "href": "syllabus.html#learning-goals",
+    "title": "R for Data Science: Complete Study Plan & Syllabus",
+    "section": "🎯 LEARNING GOALS",
+    "text": "🎯 LEARNING GOALS\nBy the end of this course, participants will be able to:\n\nImport & wrangle data – Load, clean, reshape messy datasets into analysis-ready format\nTransform & explore – Use dplyr to filter, summarize, and join datasets; conduct EDA\nVisualize effectively – Create exploratory and publication-ready plots with ggplot2\nWrite functions & automate – Build reusable functions; iterate efficiently with purrr\nModel data – Fit simple and complex models to understand relationships\nCommunicate results – Generate reproducible reports with R Markdown\nApply to epidemiology – Use all skills on real STH surveillance and research data"
+  },
+  {
+    "objectID": "syllabus.html#course-materials",
+    "href": "syllabus.html#course-materials",
+    "title": "R for Data Science: Complete Study Plan & Syllabus",
+    "section": "📚 COURSE MATERIALS",
+    "text": "📚 COURSE MATERIALS\n\nPrimary Text\n\nR for Data Science (1st Edition) – Free online: https://r4ds.hadley.nz\nPDF Available: All 24 chapters included in this plan\n\n\n\nSecondary References\n\nThe Epidemiologist R Handbook – Free online: https://www.epirhandbook.com\n\nDomain-specific examples, epi workflows, case studies\n\nAdvanced R (2nd Edition) by Hadley Wickham – Free online: https://adv-r.hadley.nz\n\nDeep-dive on functions, vectors, environments, metaprogramming\n\n\n\n\nRequired Software\n\nR (latest version): https://cloud.r-project.org\nRStudio IDE: https://www.rstudio.com/download"
+  },
+  {
+    "objectID": "syllabus.html#complete-25-week-study-schedule-reordered-for-learning",
+    "href": "syllabus.html#complete-25-week-study-schedule-reordered-for-learning",
+    "title": "R for Data Science: Complete Study Plan & Syllabus",
+    "section": "📖 COMPLETE 25-WEEK STUDY SCHEDULE (REORDERED FOR LEARNING)",
+    "text": "📖 COMPLETE 25-WEEK STUDY SCHEDULE (REORDERED FOR LEARNING)\n\n\n\n\n\nSession\nDate\nCh\nChapter\nKey_Topics\nEpi_Ref\nAdv_R_Ref\nLeaders\n\n\n\n\n1\nFeb 4\n2\nWorkflow: Basics\nCoding fundamentals\n3: R basics\nCh5: Style\n#1\n\n\n2\nFeb 11\n4\nWorkflow: Scripts\nRunning code, debugging\n3: R basics\nCh5: Style\n#2\n\n\n3\nFeb 18\n6\nWorkflow: Projects\nRStudio projects\n3: R basics\nCh5: Style\n#3\n\n\n4\nFeb 25\n7\nTibbles with tibble\nTibbles vs data.frame\n5: Data wrangling\nCh2: Data structures\n#4\n\n\n5\nMar 4\n8\nData Import with readr\nCSV/Excel parsing\n9: Import/export\nCh3: Subsetting\n#5\n\n\n6\nMar 11\n9\nTidy Data with tidyr\npivot_longer/wider\n5: Data wrangling\nCh3: Subsetting\n#6\n\n\n7\nMar 18\n3 (Pt 1)\nData Transformation Pt 1\nfilter, arrange, select\n4: dplyr basics\nCh3: Subsetting\n#7\n\n\n8\nMar 25\n3 (Pt 2)\nData Transformation Pt 2\nmutate, summarise, group_by\n4: dplyr basics\nCh11: Functionals\n#8\n\n\n9\nApr 1\n14\nPipes with magrittr\n%&gt;% operator, piping\n4: dplyr basics\nCh11: Functionals\n#9 & #10\n\n\n10\nApr 8\n10\nRelational Data\nKeys, joins\n5: Data wrangling\nCh3: Subsetting\n#11\n\n\n11\nApr 15\n11\nStrings with stringr\nRegex matching\n8: Character strings\nCh6: Functions\n#12\n\n\n12\nApr 22\n12\nFactors with forcats\nRecoding factors\n6: Factors\nCh2: Data structures\n#13\n\n\n13\nApr 29\n13\nDates & Times with lubridate\nTime spans\n7: Dates\nCh6: Functions\n#14\n\n\n14\nMay 6\n5\nExploratory Data Analysis\nPatterns, outliers\n10: Descriptive tables\nCh5: Style guide\n#1\n\n\n15\nMay 13\n1\nData Visualization with ggplot2\nAesthetics, geoms\n11: ggplot2\nCh6: Functions\n#2\n\n\n16\nMay 20\n15\nFunctions\nScoping, arguments\n14: Functions\nCh6: Functions\n#3\n\n\n17\nMay 27\n16\nVectors\nAtomic vectors\n13: Logical vectors\nCh2: Data structures\n#4\n\n\n18\nJun 3\n17\nIteration with purrr\nmap, walk, reduce\n15: Loops\nCh11: Functionals\n#5 & #6\n\n\n19\nJun 10\n18\nModel Basics with modelr\nSimple models\n20: Statistical modeling\nCh6: Functions\n#7\n\n\n20\nJun 17\n19\nModel Building\nCase studies\n20: Statistical modeling\nCh16: Performance\n#8\n\n\n21\nJun 24\n20\nMany Models with purrr & broom\nList columns\n20: Statistical modeling\nCh11: Functionals\n#9\n\n\n22\nJul 1\n21\nR Markdown\nCode chunks, YAML\n18: Output formats\nCh5: Style guide\n#11 & #12\n\n\n23\nJul 8\n22\nGraphics for Communication\nLabels, themes\n11: ggplot2\nCh6: Functions\n#10\n\n\n24\nJul 15\n23\nR Markdown Formats\nNotebooks\n18: Output formats\nCh5: Style guide\n#13\n\n\n25\nJul 22\n24\nR Markdown Workflow\nBest practices\n18: Output formats\nCh5: Style guide\n#14"
+  },
+  {
+    "objectID": "syllabus.html#book-structure-all-24-chapters",
+    "href": "syllabus.html#book-structure-all-24-chapters",
+    "title": "R for Data Science: Complete Study Plan & Syllabus",
+    "section": "📚 BOOK STRUCTURE: ALL 24 CHAPTERS",
+    "text": "📚 BOOK STRUCTURE: ALL 24 CHAPTERS\n\nPART I: EXPLORE (Chapters 1–6)\nFoundational concepts and workflows before diving into data manipulation.\n\n\n\n\n\nCh\nTitle\nKey.Sections\nWeek\nCompetency\n\n\n\n\n1\nData Visualization with ggplot2\nFirst steps, aesthetics, facets, geoms, stats, layered grammar\n15\nCreate exploratory & publication plots\n\n\n2\nWorkflow: Basics\nCoding basics, naming, functions, console interaction\n1\nUnderstand R fundamentals\n\n\n3\nData Transformation with dplyr\nfilter, arrange, select, mutate, summarise, group_by\n7–8\nManipulate data rows/columns\n\n\n4\nWorkflow: Scripts\nRunning code, diagnostics, debugging in RStudio\n2\nWrite and execute scripts\n\n\n5\nExploratory Data Analysis\nVariation, covariation, patterns, models\n14\nDiscover insights before modeling\n\n\n6\nWorkflow: Projects\nRStudio projects, organization, file structure\n3\nOrganize analyses professionally\n\n\n\n\n\n\n\n\n\n\nPART II: WRANGLE (Chapters 7–13)\nData import, cleaning, reshaping, and handling special data types.\n\n\n\n\n\nCh\nTitle\nKey.Sections\nWeek\nCompetency\n\n\n\n\n7\nTibbles with tibble\nCreating, printing, subsetting tibbles\n4\nWork with tidy data structures\n\n\n8\nData Import with readr\nParsing, reading CSV/Excel, writing files\n5\nImport data into R\n\n\n9\nTidy Data with tidyr\npivot_longer, pivot_wider, separate, missing\n6\nReshape messy data\n\n\n10\nRelational Data with dplyr\nKeys, joins (left/inner/anti), set operations\n10\nCombine multiple datasets\n\n\n11\nStrings with stringr\nString basics, regex, pattern matching, tools\n11\nHandle text data\n\n\n12\nFactors with forcats\nCreating, ordering, recoding factors\n12\nManage categorical variables\n\n\n13\nDates & Times with lubridate\nCreating, components, time spans, zones\n13\nHandle temporal data\n\n\n\n\n\n\n\n\n\n\nPART III: PROGRAM (Chapters 14–17)\nWriting functions and iterating efficiently.\n\n\n\n\n\nCh\nTitle\nKey.Sections\nWeek\nCompetency\n\n\n\n\n14\nPipes with magrittr\n%&gt;% , piping alternatives, when to use\n9\nChain operations fluently\n\n\n15\nFunctions\nComponents, scoping, arguments, returns\n16\nWrite reusable functions\n\n\n16\nVectors\nAtomic vectors, lists, attributes, augmented\n17\nUnderstand R data types\n\n\n17\nIteration with purrr\nFor loops, map, walk, reduce, functionals\n18\nLoop efficiently\n\n\n\n\n\n\n\n\n\n\nPART IV: MODEL (Chapters 18–20)\nBuilding and evaluating statistical models.\n\n\n\n\n\nCh\nTitle\nKey.Sections\nWeek\nCompetency\n\n\n\n\n18\nModel Basics with modelr\nSimple models, visualization, formulas, families\n19\nUnderstand modeling workflow\n\n\n19\nModel Building\nWhy models, case studies, evaluation\n20\nBuild & evaluate models\n\n\n20\nMany Models with purrr & broom\nList columns, nested data, tidying results\n21\nFit models to grouped data\n\n\n\n\n\n\n\n\n\n\nPART V: COMMUNICATE (Chapters 21–24)\nDocumenting and sharing results reproducibly.\n\n\n\n\n\nCh\nTitle\nKey.Sections\nWeek\nCompetency\n\n\n\n\n21\nR Markdown\nBasics, formatting, code chunks, YAML\n22\nWrite reproducible reports\n\n\n22\nGraphics for Communication\nLabels, annotations, scales, themes, saving\n23\nPolish plots for publication\n\n\n23\nR Markdown Formats\nDocuments, notebooks, presentations, dashboards\n24\nCreate multiple output formats\n\n\n24\nR Markdown Workflow\nOrganization, practices, reproducibility\n25\nApply best practices"
+  },
+  {
+    "objectID": "syllabus.html#secondary-reference-mapping",
+    "href": "syllabus.html#secondary-reference-mapping",
+    "title": "R for Data Science: Complete Study Plan & Syllabus",
+    "section": "🔗 SECONDARY REFERENCE MAPPING",
+    "text": "🔗 SECONDARY REFERENCE MAPPING\nUse these resources to clarify concepts and explore domain-specific examples:\n\n\n\n\n\nR4DS.Chapters\nEpidemiologist.R.Handbook\nAdvanced.R\nWhen.to.Use\n\n\n\n\n2, 4, 6\n3: R basics\nCh5: Style guide\nFundamentals & code organization\n\n\n7–9\n5: Data wrangling, 9: Import/export\nCh2, Ch3: Data structures\nUnderstanding data manipulation\n\n\n10–13\n4: dplyr, 6: Factors, 7: Dates, 8: Strings\nCh3: Subsetting, Ch6: Functions\nComplex transformations\n\n\n1, 5, 14\n10: Descriptive tables, 11: ggplot2\nCh6: Functions\nVisualization & exploration\n\n\n15–17\n14: Functions, 15: Loops\nCh6: Functions, Ch11: Functionals\nProgramming concepts\n\n\n18–20\n20: Statistical modeling, 21: Models\nCh16: Performance\nModeling & optimization\n\n\n21–24\n18: Output formats, 22: Communication\nCh5: Style guide\nDocumentation & sharing"
+  },
+  {
+    "objectID": "syllabus.html#book-order-vs.-our-learning-sequence",
+    "href": "syllabus.html#book-order-vs.-our-learning-sequence",
+    "title": "R for Data Science: Complete Study Plan & Syllabus",
+    "section": "📖 BOOK ORDER vs. OUR LEARNING SEQUENCE",
+    "text": "📖 BOOK ORDER vs. OUR LEARNING SEQUENCE\n\nWhy We’re Reordering the Chapters\nThe R for Data Science book is published in this order: Visualization (Ch 1) → Transformation (Ch 3) → Wrangling (Ch 7–13) → Programming (Ch 14–17) → Modeling (Ch 18–20) → Communication (Ch 21–24).\nHowever, this order isn’t optimal for beginners learning epidemiology. The book’s authors acknowledge this in their Preface:\n\n“Starting with data ingest and tidying is suboptimal because 80% of the time it’s routine and boring, and the other 20% of the time it’s weird and frustrating. That’s a bad place to start learning a new subject! Instead, we’ll start with visualization and transformation of data that’s already been imported and tidied.”\n\nThe problem: Chapter 1 (ggplot2) assumes clean data exists. But beginners need to import, clean, and reshape data FIRST before they can visualize or analyze it.\n\n\nOur Reordered Learning Sequence\nWe follow the natural real-world epidemiological workflow instead of the book’s ordering:\n\n\n\n\n\nPhase\nWeeks\nOur.Order\nBook.Chapters\nPurpose\n\n\n\n\n1. Foundation\n1–3\nFirst\n2, 4, 6 (Workflow)\nLearn RStudio, organize work, set up projects BEFORE coding\n\n\n2. Wrangling\n4–13\nSecond\n7–13 (Import, Tidy, Transform, Join, Handle types)\nGet messy data into analysis-ready format\n\n\n3. Exploration\n14–15\nThird\n5, 1 (EDA, Visualization)\nExplore clean data visually & statistically\n\n\n4. Programming\n16–18\nFourth\n15, 16, 17 (Functions, Vectors, Iteration)\nWrite reusable code & automate workflows\n\n\n5. Modeling\n19–21\nFifth\n18, 19, 20 (Model Basics, Building, Many Models)\nFit & evaluate statistical models\n\n\n6. Communication\n22–25\nSixth\n21–24 (R Markdown, Graphics, Formats, Workflow)\nDocument findings & create reproducible reports\n\n\n\n\n\n\n\n\n\nWhy This Order Works Better\n✅ Motivation: Learn foundational tools first, then apply them to real problems\n✅ Real-world: Follow the actual epidemiological analysis workflow\n✅ Practical: Work with messy data early; clean it before analyzing\n✅ Confidence: See tangible results at each step (import → clean → analyze → visualize)\n✅ Less frustration: Don’t start with “boring” wrangling; build to it naturally\n\n\nBook Order (As Published)\nFor reference, here’s the original chapter sequence in R for Data Science (1st Edition):\n\n\n\n\n\nCh\nPart\nTitle\n\n\n\n\n1\nI: Explore\nData Visualization with ggplot2\n\n\n2\nI: Explore\nWorkflow: Basics\n\n\n3\nI: Explore\nData Transformation with dplyr\n\n\n4\nI: Explore\nWorkflow: Scripts\n\n\n5\nI: Explore\nExploratory Data Analysis\n\n\n6\nI: Explore\nWorkflow: Projects\n\n\n7–13\nII: Wrangle\nTibbles, Import, Tidy, Joins, Strings, Factors, Dates\n\n\n14–17\nIII: Program\nPipes, Functions, Vectors, Iteration\n\n\n18–20\nIV: Model\nModel Basics, Building, Many Models\n\n\n21–24\nV: Communicate\nR Markdown, Graphics, Formats, Workflow"
+  },
+  {
+    "objectID": "syllabus.html#weekly-meeting-format-60-minutes",
+    "href": "syllabus.html#weekly-meeting-format-60-minutes",
+    "title": "R for Data Science: Complete Study Plan & Syllabus",
+    "section": "🎓 WEEKLY MEETING FORMAT (60 Minutes)",
+    "text": "🎓 WEEKLY MEETING FORMAT (60 Minutes)\n\nStructure\n\n\n\n\n\nTime\nActivity\nDetails\n\n\n\n\n0–15 min\nSummary & Discussion\nLeader(s) summarize key concepts & learning objectives; group discusses what was clear/confusing and what's relevant to epi work\n\n\n15–45 min\nLive Demo, Exercises & Problem-Solving\nLeader(s) demonstrate 2–3 code examples live; group follows along, attempts exercises, asks questions in real-time\n\n\n45–55 min\nHelp & Troubleshooting\nLeader(s) & peers help resolve coding errors, confusions, and remaining questions\n\n\n55–60 min\nWrap-up & Next Week Preview\nSummarize key takeaways; preview next week's chapter; assign prep work\n\n\n\n\n\n\n\n\n\nLeader Responsibilities\nEach leader should: - Read chapter thoroughly 1 week in advance (3–4 hours) - Prepare 2–3 worked code examples to demo live (copy-paste ready) - Identify 3–5 key concepts that will be discussed - Note common confusions or tricky sections from your own reading - Bring 2–3 discussion questions to engage the group - Help troubleshoot participant questions & coding errors - Share practical epi applications of the chapter content\nFor Co-Leaders (3 toughest sessions): - Divide responsibilities: One leads first half, other leads second half\n- Coordinate prep work: Meet 1 week before to align on content & demos - Share code examples: Create demo scripts together for consistency\n\n\nLeadership Rotation (Random Selection by Number 1–14)\nTo assign leaders randomly: 1. Each person selects a number between 1 and 14 at the start of the course 2. Leadership follows the rotation below across all 25 sessions\n\n\n\n\n\nNumber\nSession.1\nSession.2\nTotal\n\n\n\n\n#1\nFeb 4\nMay 6\n2 sessions\n\n\n#2\nFeb 11\nMay 13\n2 sessions\n\n\n#3\nFeb 18\nMay 20\n2 sessions\n\n\n#4\nFeb 25\nMay 27\n2 sessions\n\n\n#5\nMar 4\nJun 3(co)\n2 sessions\n\n\n#6\nMar 11\nJun 3(co)\n2 sessions\n\n\n#7\nMar 18\nJun 10\n2 sessions\n\n\n#8\nMar 25\nJun 17\n2 sessions\n\n\n#9\nApr 1(co)\nJun 24\n2 sessions\n\n\n#10\nApr 1(co)\nJul 8\n2 sessions\n\n\n#11\nApr 8\nJul 1(co)\n2 sessions\n\n\n#12\nApr 15\nJul 1(co)\n2 sessions\n\n\n#13\nApr 22\nJul 15\n2 sessions\n\n\n#14\nApr 29\nJul 22\n2 sessions\n\n\n\n\n\n\n\nToughest sessions (2 leads each): Apr 1 (Session 9): #9 & #10 co-lead (Pipes - Ch 14) Jun 3 (Session 18): #5 & #6 co-lead (Iteration - Ch 17) Jul 1 (Session 22): #11 & #12 co-lead (R Markdown - Ch 21) Perfect balance: 14 leads × 2 sessions each = exactly 25 sessions covered!"
+  },
+  {
+    "objectID": "syllabus.html#weekly-preparation-4-hours",
+    "href": "syllabus.html#weekly-preparation-4-hours",
+    "title": "R for Data Science: Complete Study Plan & Syllabus",
+    "section": "📝 WEEKLY PREPARATION (~4 hours)",
+    "text": "📝 WEEKLY PREPARATION (~4 hours)\nParticipants should dedicate approximately 4 hours per week:\n\nBefore the Meeting (3.5 hours)\n\nRead & understand chapter (2 hours)\n\nSkim introduction for context (15 min)\nRead thoroughly with code examples (1 hr)\nRun all examples in RStudio (45 min)\n\nTake notes on key concepts (15 min)\n\nPractice exercises (1 hour)\n\nWork through 5–7 exercises at chapter end\nRun code locally; save working examples\nDebug errors independently first\nNote 2–3 challenges for discussion\n\nPrepare questions & review (30 minutes)\n\nList 2–3 specific questions\nReview epi applications from syllabus\nPreview next week’s chapter overview\n\n\n\n\nAfter the Meeting (30 minutes)\n\nReview meeting notes & code demos\nRe-run 1–2 examples from leader\nUpdate personal code library"
+  },
+  {
+    "objectID": "syllabus.html#epidemiological-applications",
+    "href": "syllabus.html#epidemiological-applications",
+    "title": "R for Data Science: Complete Study Plan & Syllabus",
+    "section": "🔬 EPIDEMIOLOGICAL APPLICATIONS",
+    "text": "🔬 EPIDEMIOLOGICAL APPLICATIONS\nSee how each chapter applies to real STH research:\n\n\n\n\n\nChapter\nEpi.Application\nExample\n\n\n\n\n8\nImport surveillance data\nLoad district-level STH prevalence data from Excel\n\n\n9\nReshape prevalence data\nPivot age-stratified prevalence wide to long format\n\n\n3, 10\nFilter & join datasets\nSubset by age group; join with population denominators\n\n\n11\nParse case definitions\nExtract infection intensity category from text\n\n\n12, 13\nManage categories & timelines\nOrganize treatment arms; track follow-up dates\n\n\n5, 1\nVisualize distribution\nCreate maps & plots of STH by region & year\n\n\n15–17\nAutomate calculations\nWrite function to calculate prevalence for any region\n\n\n18–20\nModel transmission\nFit age-prevalence curves; predict MDA impact\n\n\n21–24\nGenerate reports\nCreate quarterly surveillance reports in HTML/PDF"
+  },
+  {
+    "objectID": "syllabus.html#group-guidelines",
+    "href": "syllabus.html#group-guidelines",
+    "title": "R for Data Science: Complete Study Plan & Syllabus",
+    "section": "🤝 GROUP GUIDELINES",
+    "text": "🤝 GROUP GUIDELINES\n\nExpectations\n\nAttend weekly meetings: In-person or virtual, same time each week\nComplete prep work: Read chapter & attempt exercises before meeting\nParticipate actively: Share insights, ask questions, help peers\nLead 2–3 chapters: Fulfill your leadership duties when assigned (solo or co-lead)\nRespect others: Patient with different learning paces & backgrounds\n\n\n\nCommunication\n\nWhatsApp channel: Share resources, ask quick questions between meetings\nGoogle Drive folder: Store notes, code, datasets\nMeeting notes: Record key takeaways & useful code snippets each week"
+  },
+  {
+    "objectID": "syllabus.html#support-resources",
+    "href": "syllabus.html#support-resources",
+    "title": "R for Data Science: Complete Study Plan & Syllabus",
+    "section": "📞 SUPPORT & RESOURCES",
+    "text": "📞 SUPPORT & RESOURCES\n\nIf You Get Stuck\n\nGoogle the error message – Often finds solutions quickly\nSearch Stack Overflow – Add [R] tag for R-specific results\nConsult secondary references:\n\nEpidemiologist R Handbook: https://www.epirhandbook.com\nAdvanced R: https://adv-r.hadley.nz\n\nAsk the group: Bring confusing sections to weekly meetings\nWhatsApp channel: Post quick questions between meetings\n\n\n\nHelpful Links\n\nR Project: https://www.r-project.org\nRStudio Download: https://www.rstudio.com\nTidyverse: https://www.tidyverse.org\nR4DS Online: https://r4ds.hadley.nz\nRStudio Community: https://community.rstudio.com\nStack Overflow [R] tag: https://stackoverflow.com/questions/tagged/r"
+  },
+  {
+    "objectID": "syllabus.html#timeline-summary",
+    "href": "syllabus.html#timeline-summary",
+    "title": "R for Data Science: Complete Study Plan & Syllabus",
+    "section": "📅 TIMELINE SUMMARY",
+    "text": "📅 TIMELINE SUMMARY\n\n\n\n\n\nPhase\nWeeks\nChapters\nFocus\n\n\n\n\nFoundations\n1–3\n2, 4, 6\nRStudio, scripts, organization\n\n\nWrangling\n4–13\n7–13\nImport, clean, reshape, join data\n\n\nProgramming\n14–18\n5, 1, 14–17\nEDA, visualization, functions, iteration\n\n\nModeling\n19–21\n18–20\nFit & evaluate models\n\n\nCommunication\n22–25\n21–24\nReports, dashboards, reproducibility"
+  },
+  {
+    "objectID": "syllabus.html#checklist-for-getting-started",
+    "href": "syllabus.html#checklist-for-getting-started",
+    "title": "R for Data Science: Complete Study Plan & Syllabus",
+    "section": "✅ CHECKLIST FOR GETTING STARTED",
+    "text": "✅ CHECKLIST FOR GETTING STARTED\nBefore Week 1 (by February 04, 2026):\n\nInstall R (latest version)\nInstall RStudio IDE\nTest RStudio: Open it, run 1 + 1 in console\nRead Chapter 2 (Workflow: Basics) for first meeting (Leader #1)"
+  },
+  {
+    "objectID": "syllabus.html#final-notes",
+    "href": "syllabus.html#final-notes",
+    "title": "R for Data Science: Complete Study Plan & Syllabus",
+    "section": "📖 FINAL NOTES",
+    "text": "📖 FINAL NOTES\nThis syllabus provides a structured path to mastery of R for epidemiological data science. The key to success is:\n\nConsistency: Show up weekly & do the prep work\nCuriosity: Ask questions; try variations of examples\nCollaboration: Learn from peers; help each other\nApplication: Apply concepts to your own epi data\n\nBy Week 25, you’ll have the skills to conduct independent, reproducible epidemiological analyses from raw data to publication-ready reports."
+  },
+  {
+    "objectID": "syllabus.html#document-version-control",
+    "href": "syllabus.html#document-version-control",
+    "title": "R for Data Science: Complete Study Plan & Syllabus",
+    "section": "📝 Document Version Control",
+    "text": "📝 Document Version Control\n\n\n\n\n\nVersion\nDate\nChanges\n\n\n\n\n1.0\nJan 21, 2026\nInitial complete syllabus with all 24 chapters, 25 weeks, 10-person rotation, 60-min meetings, co-leaders in final 5 weeks, chapters reordered for learning progression\n\n\n2.0\nJan 29, 2026\nUpdated for 14 leads (each gets exactly 2 sessions), start date Feb 4, 3 toughest sessions with co-leaders (Pipes, Iteration, R Markdown), date-based session schedule\n\n\n\n\n\n\n\n\nLast updated: January 29, 2026 | Next review: March 2026\nReady to get started? Let’s master R for epidemiology! 🚀"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "R4DS Syllabus",
+    "section": "",
+    "text": "Welcome! Open the syllabus here:\n\nOpen the syllabus"
+  }
+]
