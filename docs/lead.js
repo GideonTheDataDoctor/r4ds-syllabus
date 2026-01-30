@@ -145,9 +145,22 @@ const SUPABASE_ANON_KEY = "sb_publishable__ogwCjIp_G_RLn0zbc5C-g_Ix81VZps";
       }
     });
 
-    // TEMPORARY: Disable reset until we add a secure Edge Function
-    $reset.addEventListener("click", function () {
-      alert("Reset for everyone requires an admin-only server function. Tell me when you're ready and I’ll add it.");
+    // Secure Edge Function ot reset the list
+    $reset.addEventListener("click", async function () {
+    const pw = prompt("Admin password?");
+    if (!pw) return;
+
+    const { data, error } = await db.functions.invoke("reset-leads", {
+    body: { password: pw },
+    });
+
+    if (error || !data?.ok) {
+    $msg.textContent = "Reset failed (wrong password or server error).";
+    return;
+    }
+
+    $msg.textContent = "Reset done for everyone.";
+    await refresh();
     });
   });
 })();
