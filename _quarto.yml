@@ -10,3 +10,9 @@ website:
       - href: index.qmd
         text: Home
       - syllabus.qmd   # ← Rename your QMD to this
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <script src="lead.js"></script>
