@@ -9,7 +9,7 @@
 **Developed by**: Gideon J I, Junior Research Fellow\
 **Institution**: Christian Medical College, Vellore\
 **Email**: [gideon.ji.inst\@cmcvellore.ac.in](mailto:gideon.ji.inst@cmcvellore.ac.in){.email}\
-**Date Created**: January 29, 2026
+**Date Created**: January 30, 2026
 
 ------------------------------------------------------------------------
 
@@ -604,14 +604,15 @@ By **Week 25**, you'll have the skills to conduct independent, reproducible epid
 
 ------------------------------------------------------------------------
 
-## 📝 Document Version Control
-
 ```{r, echo=FALSE}
 versions <- data.frame(
-  Version = c("1.0", "2.0"),
-  Date = c("Jan 21, 2026", "Jan 29, 2026"),
-  Changes = c("Initial complete syllabus with all 24 chapters, 25 weeks, 10-person rotation, 60-min meetings, co-leaders in final 5 weeks, chapters reordered for learning progression",
-             "Updated for 14 leads (each gets exactly 2 sessions), start date Feb 4, 3 toughest sessions with co-leaders (Pipes, Iteration, R Markdown), date-based session schedule")
+  Version = c("1.0", "2.0", "3.0"),
+  Date = c("Jan 21, 2026", "Jan 29, 2026", "Jan 30, 2026"),
+  Changes = c(
+    "Initial complete syllabus with all 24 chapters, 25 weeks, 10-person rotation, 60-min meetings, co-leaders in final 5 weeks, chapters reordered for learning progression",
+    "Updated for 14 leads (each gets exactly 2 sessions), start date Feb 4, 3 toughest sessions with co-leaders (Pipes, Iteration, R Markdown), date-based session schedule",
+    "Added lead-number generator with live table + rotation dates; added admin reset (password-protected) for browser-local storage"
+  )
 )
 
 kable(versions, escape = FALSE, booktabs = TRUE) %>%

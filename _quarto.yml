@@ -9,7 +9,8 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - syllabus.qmd   # ← Rename your QMD to this
+      - href: syllabus.qmd
+        text: Syllabus
 
 format:
   html:
