@@ -42,7 +42,7 @@ By the end of this course, participants will be able to:
 
 ### Primary Text
 
--   **R for Data Science (1st Edition)** – Free online: <https://r4ds.hadley.nz>
+-   **R for Data Science (1st Edition)** – Free online: <https://drive.google.com/file/d/1M81s44nXy_nOYAoyMxzNbdvxUGP3sHM2/view?usp=sharing>
 
 -   **PDF Available**: All 24 chapters included in this plan
 
@@ -50,7 +50,7 @@ By the end of this course, participants will be able to:
 
 1.  **The Epidemiologist R Handbook** – Free online: <https://www.epirhandbook.com>
     -   Domain-specific examples, epi workflows, case studies
-2.  **Advanced R (2nd Edition)** by Hadley Wickham – Free online: <https://adv-r.hadley.nz>
+2.  **Advanced R (2nd Edition)** by Hadley Wickham – Free online: <https://drive.google.com/file/d/1rJncEiljgrhH6ognWzQQan5vHGN5pSRx/view?usp=sharing>
     -   Deep-dive on functions, vectors, environments, metaprogramming
 
 ### Required Software

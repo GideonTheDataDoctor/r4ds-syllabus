@@ -18,7 +18,7 @@
     "href": "syllabus.html#course-materials",
     "title": "R for Data Science: Complete Study Plan & Syllabus",
     "section": "📚 COURSE MATERIALS",
-    "text": "📚 COURSE MATERIALS\n\nPrimary Text\n\nR for Data Science (1st Edition) – Free online: https://r4ds.hadley.nz\nPDF Available: All 24 chapters included in this plan\n\n\n\nSecondary References\n\nThe Epidemiologist R Handbook – Free online: https://www.epirhandbook.com\n\nDomain-specific examples, epi workflows, case studies\n\nAdvanced R (2nd Edition) by Hadley Wickham – Free online: https://adv-r.hadley.nz\n\nDeep-dive on functions, vectors, environments, metaprogramming\n\n\n\n\nRequired Software\n\nR (latest version): https://cloud.r-project.org\nRStudio IDE: https://www.rstudio.com/download"
+    "text": "📚 COURSE MATERIALS\n\nPrimary Text\n\nR for Data Science (1st Edition) – Free online: https://drive.google.com/file/d/1M81s44nXy_nOYAoyMxzNbdvxUGP3sHM2/view?usp=sharing\nPDF Available: All 24 chapters included in this plan\n\n\n\nSecondary References\n\nThe Epidemiologist R Handbook – Free online: https://www.epirhandbook.com\n\nDomain-specific examples, epi workflows, case studies\n\nAdvanced R (2nd Edition) by Hadley Wickham – Free online: https://drive.google.com/file/d/1rJncEiljgrhH6ognWzQQan5vHGN5pSRx/view?usp=sharing\n\nDeep-dive on functions, vectors, environments, metaprogramming\n\n\n\n\nRequired Software\n\nR (latest version): https://cloud.r-project.org\nRStudio IDE: https://www.rstudio.com/download"
   },
   {
     "objectID": "syllabus.html#complete-25-week-study-schedule-reordered-for-learning",
