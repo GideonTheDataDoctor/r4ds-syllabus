@@ -16,4 +16,5 @@ format:
   html:
     include-in-header:
       - text: |
+          <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
           <script src="lead.js"></script>
